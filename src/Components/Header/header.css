@@ -1,0 +1,29 @@
+.app_title{
+    cursor: pointer;
+}
+
+.app_header{
+    height: 120px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    background-color: gray;
+    z-index: 100;
+    
+    
+
+}
+
+
+ .app_title{
+   background: rgb(6,132,199);
+background: linear-gradient(96deg, rgba(6,132,199,0.42482930672268904) 0%, rgba(12,78,233,0.5872942927170868) 52%, rgba(92,160,205,0.9794511554621849) 100%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+
+.movie__logo{
+    fill: rgb(176,132,202);
+}

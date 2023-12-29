@@ -1,0 +1,158 @@
+.geners  span{
+
+    color: white;
+    
+    font-size: 1.3rem;
+    
+    border-radius: 40px;
+    padding: 7px;
+    cursor: pointer;
+    background: rgb(60,142,189);
+    
+}
+.geners{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.btn-close{
+   font-size: 15px !important;
+   width: 20px;
+   
+   
+}
+
+.btn-close:hover{
+    border: 1px solid violet;
+    background-color: gray;
+}
+
+.selected_genres{
+ 
+background: rgb(28,64,194) !important;
+background: linear-gradient(96deg, rgba(28,64,194,0.9150253851540616) 43%, rgba(92,160,205,0.9794511554621849) 100%) !important;
+
+}
+
+
+/* Movie compenents css prpertys */
+
+
+
+.movies{
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 30px; */
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    
+   
+    
+}
+
+
+
+.movieList{
+
+    box-shadow: 18px 4px 51px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    
+
+}
+
+.movie_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 10px;
+    font-size: 25px;
+
+}
+
+.movie_type_data{
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie_title{
+    font-weight: bolder;
+}
+
+.movie_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+   
+         
+}
+
+@media (max-width: 767.98px) {
+  
+
+  .movie_suggestion_content {
+    padding-top: 70px;
+  }
+  .movies {
+    grid-template-columns: repeat(1, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app_header {
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .pagination {
+    width: 250px;
+  }
+  .pagination > span {
+    padding: 15px 15px;
+  }
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+
+    .movies {
+    grid-template-columns: repeat(2, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+
+@media (min-width:992px) and (max-width: 1399.98px){
+    
+
+    .movies {
+    grid-template-columns: repeat(3, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+@media (min-width: 1400px) and (max-width:1989.98px){
+    .movies {
+    grid-template-columns: repeat(4, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+}

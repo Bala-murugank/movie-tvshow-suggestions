@@ -1,0 +1,115 @@
+.search{
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 30px; */
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+   
+    
+}
+
+
+
+.searchItem{
+
+    box-shadow: 18px 4px 51px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+ 
+}
+
+.search_movie_tv_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 10px;
+    font-size: 25px;
+
+}
+
+.search_movie_tv_type_data{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search_movie_tv_title{
+    font-weight: bolder;
+}
+
+.search_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+   
+         
+}
+
+@media (max-width: 767.98px) {
+  body {
+    background-color: yellow;
+  }
+
+  .movie_suggestion_content {
+    padding-top: 70px;
+  }
+  .search {
+    grid-template-columns: repeat(1, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app_header {
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .pagination {
+    width: 250px;
+  }
+  .pagination > span {
+    padding: 15px 15px;
+  }
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+
+    .search {
+    grid-template-columns: repeat(2, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+
+@media (min-width:992px) and (max-width: 1399.98px){
+    
+    .search {
+    grid-template-columns: repeat(3, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media (min-width: 1400px) and (max-width:1989.98px){
+    .search {
+    grid-template-columns: repeat(4, 350px);
+
+    justify-content: center;
+    align-items: center;
+  }
+}
