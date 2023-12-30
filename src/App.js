@@ -54,8 +54,11 @@ function App() {
           />
         </Routes>
       </div>
-      
-         <FooterNavigatioin />
+
+      <div>
+       <FooterNavigatioin />
+      </div>
+        
       
      
      

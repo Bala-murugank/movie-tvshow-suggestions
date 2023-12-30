@@ -5,11 +5,11 @@ import Tabs from "react-bootstrap/Tabs";
 import { img_300, unavailable } from "../../Config/config";
 import axios from "axios";
 import "./search.css";
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar } from "react-circular-progressbar";
 import MovieShowDetailsModel from "../MovieShowDetailsModel/MovieShowDetailsModel";
 
 const Search = () => {
-  const [type, setType] = useState('movie');
+  const [type, setType] = useState("movie");
 
   const [seachQurey, setSearchQuary] = useState("");
   const [searchData, setSearchData] = useState([]);
@@ -25,10 +25,9 @@ const Search = () => {
         }&page=${page}&include_adult=false`
       )
       .then((res) => {
-        
         setSearchData(res.data.results);
       });
-  }, [type, seachQurey,page]);
+  }, [type, seachQurey, page]);
 
   return (
     <div className="search_section">
@@ -39,7 +38,6 @@ const Search = () => {
         style={{ width: 400 }}
         onChange={(event) => {
           setSearchQuary(event.target.value);
-          
         }}
       />
 
@@ -63,33 +61,40 @@ const Search = () => {
             {searchData?.map((searchItem) => (
               <MovieShowDetailsModel
                 key={searchItem.id}
-                style={{ height: 500, width: 320 }}
                 className="searchItem"
                 id={searchItem.id}
-              media_type={type}
+                media_type={type}
               >
-                 <span className="NoteBadge">
-                <CircularProgressbar  value={Math.floor(searchItem.vote_average)}  circleRatio={10} text={Math.floor(searchItem.vote_average)+ "0%"}
-                styles={{
-                  root : {},
-                  path :{
-                    stroke: Math.floor(searchItem.vote_average) === 0 ?  'rgb(218,32,46)' :  Math.floor(searchItem.vote_average) >=  7 ?  'rgb(90,219,82)' : 'rgb(219,200,82)',
-                    strokeLinecap: 'round',
-                  },
-                  trail :{
-                    stroke: "black"
-                  },
-                   text :{
-                     fontSize : '30px',
-                     fill : 'black'
-                   },
-                 
-                }}/>
-              </span> 
+                <span className="NoteBadge">
+                  <CircularProgressbar
+                    value={Math.floor(searchItem.vote_average)}
+                    circleRatio={10}
+                    text={Math.floor(searchItem.vote_average) + "0%"}
+                    styles={{
+                      root: {},
+                      path: {
+                        stroke:
+                          Math.floor(searchItem.vote_average) === 0
+                            ? "rgb(218,32,46)"
+                            : Math.floor(searchItem.vote_average) >= 7
+                            ? "rgb(90,219,82)"
+                            : "rgb(219,200,82)",
+                        strokeLinecap: "round",
+                      },
+                      trail: {
+                        stroke: "black",
+                      },
+                      text: {
+                        fontSize: "30px",
+                        fill: "white",
+                      },
+                    }}
+                  />
+                </span>
 
                 <div>
                   <img
-                    style={{ height: 350, width: 320, objectFit: "fill" }}
+                    style={{ height: 250, width: 220, objectFit: "fill" }}
                     src={
                       searchItem.backdrop_path
                         ? `${img_300}${searchItem.backdrop_path}`
@@ -97,14 +102,9 @@ const Search = () => {
                     }
                     alt={`${searchItem.title || searchItem.name}`}
                   />
-
-                 
                 </div>
-               
-                <div
-                  style={{ height: 140, width: 320 }}
-                  className="search_movie_tv_name"
-                >
+
+                <div className="search_movie_tv_name">
                   <div>
                     <span className="search_movie_tv_title">
                       {searchItem.title || searchItem.name}

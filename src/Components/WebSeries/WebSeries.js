@@ -5,8 +5,8 @@ import { img_300, unavailable } from "../../Config/config";
 import Pagination from "../Pagination/Pagination";
 import useGenres from "../hooks/useGenres";
 import Genres from "../Genres/Genres";
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import MovieShowDetailsModel from "../MovieShowDetailsModel/MovieShowDetailsModel";
 export const tvSeriesData = React.createContext();
 
@@ -20,15 +20,12 @@ const WebSeries = () => {
 
   const genreforURL = useGenres(selectedGenres);
 
-  
-
   useEffect(() => {
     axios
       .get(
         `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
       )
       .then((res) => {
-      
         setMovies(res.data.results);
         setNoOfPage(res.data.total_pages);
       });
@@ -52,32 +49,39 @@ const WebSeries = () => {
           {movies.map((seriesList) => (
             <MovieShowDetailsModel
               key={seriesList.id}
-              style={{ height: 500, width: 320 }}
               className="movieList"
               id={seriesList.id}
-              media_type={'tv'}
+              media_type={"tv"}
             >
               <span className="NoteBadge">
-                <CircularProgressbar  value={Math.floor(seriesList.vote_average)}  circleRatio={10} text={Math.floor(seriesList.vote_average)+ "0%"}
-                styles={{
-                  root : {},
-                  path :{
-                    stroke: Math.floor(seriesList.vote_average) === 0 ?  'rgb(218,32,46)' :  Math.floor(seriesList.vote_average) >=  7 ?  'rgb(90,219,82)' : 'rgb(219,200,82)',
-                    strokeLinecap: 'round',
-                  },
-                  trail :{
-                    stroke: "black"
-                  },
-                   text :{
-                     fontSize : '30px',
-                     fill : 'black'
-                   },
-                 
-                }}/>
-              </span> 
+                <CircularProgressbar
+                  value={Math.floor(seriesList.vote_average)}
+                  circleRatio={10}
+                  text={Math.floor(seriesList.vote_average) + "0%"}
+                  styles={{
+                    root: {},
+                    path: {
+                      stroke:
+                        Math.floor(seriesList.vote_average) === 0
+                          ? "rgb(218,32,46)"
+                          : Math.floor(seriesList.vote_average) >= 7
+                          ? "rgb(90,219,82)"
+                          : "rgb(219,200,82)",
+                      strokeLinecap: "round",
+                    },
+                    trail: {
+                      stroke: "black",
+                    },
+                    text: {
+                      fontSize: "30px",
+                      fill: "white",
+                    },
+                  }}
+                />
+              </span>
               <div>
                 <img
-                  style={{ height: 350, width: 320, objectFit: "fill" }}
+                  style={{ height: 250, width: 220, objectFit: "fill" }}
                   src={
                     seriesList.backdrop_path
                       ? `${img_300}${seriesList.backdrop_path}`
@@ -87,7 +91,7 @@ const WebSeries = () => {
                 />
               </div>
 
-              <div style={{ height: 140, width: 320 }} className="movie_name">
+              <div className="movie_name">
                 <div>
                   <span className="movie_title">
                     {seriesList.title || seriesList.name}

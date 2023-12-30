@@ -33,7 +33,6 @@ const TrendingToday = () => {
           {trendingToday.map((trendingToday) => (
             <MovieShowDetailsModel
               key={trendingToday.id}
-              style={{ height: 500, width: 320 }}
               className="TrendingTodayList"
               id={trendingToday.id}
               media_type={trendingToday.media_type}
@@ -57,31 +56,25 @@ const TrendingToday = () => {
                     },
                     text: {
                       fontSize: "30px",
-                      fill: 'white',
-                      
+                      fill: "white",
                     },
                   }}
                 />
               </span>
               <div>
                 <img
-                className="poster"
-                  style={{ height: 350, width: 320, objectFit: "fill" }}
+                  className="poster"
+                  style={{ height: 250, width: 220, objectFit: "fill" }}
                   src={
                     trendingToday.poster_path
-
-                      ? `${img_300}${trendingToday.poster_path
-}`
+                      ? `${img_300}${trendingToday.poster_path}`
                       : `${unavailable}`
                   }
                   alt={`${trendingToday.title || trendingToday.name}`}
                 />
               </div>
 
-              <div
-                style={{ height: 140, width: 320 }}
-                className="TrendingTodayList-name"
-              >
+              <div className="TrendingTodayList-name">
                 <div>
                   <span className="trendingMovieSeriesName">
                     {trendingToday.title || trendingToday.name}

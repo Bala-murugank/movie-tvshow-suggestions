@@ -9,8 +9,9 @@ import {Container} from 'react-bootstrap'
 
 const FooterNavigatioin = () => {
   return (
-    <div className="footerNavigation">
-      <Container>
+   
+      <Container fluid className="footerNavigation">
+
         <NavLink to={'/'}>
           <PiFire /> 
           <span>Trending</span>
@@ -32,7 +33,7 @@ const FooterNavigatioin = () => {
         </NavLink>
       </Container>
       
-    </div>
+   
   );
 };
 

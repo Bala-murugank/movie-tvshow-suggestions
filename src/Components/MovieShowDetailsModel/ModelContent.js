@@ -49,24 +49,26 @@ const ModelContent = ({ movieShowModelTrailer, movieShowDetailsData }) => {
           </div>
         </div>
 
-       <div className='trailerButton'>
-        {
-             <Button disabled={movieShowModelTrailer.length < 1 && true}  variant='danger' href={`https://www.youtube.com/watch?v=${movieShowModelTrailer[0]?.key}`} target='blank'  >
-                    <span>
-                        <FaYoutube style={{width: 30,height:30}}/>
-                    </span>
-                    <span>
-                        {movieShowModelTrailer.length < 1 ? "No Trailer" : "Watch Trailer"}
-                    </span>
-                   
+        <div className="trailerButton">
+          {
+            <Button
+              disabled={movieShowModelTrailer.length < 1 && true}
+              variant="danger"
+              href={`https://www.youtube.com/watch?v=${movieShowModelTrailer[0]?.key}`}
+              target="blank"
+            >
+              <span>
+                <FaYoutube style={{ width: 30, height: 30 }} />
+              </span>
+              <span>
+                {movieShowModelTrailer.length < 1
+                  ? "No Trailer"
+                  : "Watch Trailer"}
+              </span>
             </Button>
-
-           
-        }
-       </div>
+          }
+        </div>
       </div>
-
-      
     </>
   );
 };

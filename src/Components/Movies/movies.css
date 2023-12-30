@@ -1,109 +1,102 @@
-.geners  span{
+.geners span {
+  color: white;
 
-    color: white;
-    
-    font-size: 1.3rem;
-    
-    border-radius: 40px;
-    padding: 7px;
-    cursor: pointer;
-    background: rgb(60,142,189);
-    
-}
-.geners{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  font-size: 1rem;
+
+  border-radius: 40px;
+  padding: 7px;
+  cursor: pointer;
+  background: rgb(60, 142, 189);
 }
 
+.geners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 
-.btn-close{
-   font-size: 15px !important;
-   width: 20px;
-   
-   
+  height: auto;
 }
 
-.btn-close:hover{
-    border: 1px solid violet;
-    background-color: gray;
+.btn-close {
+  font-size: 15px !important;
+  width: 20px;
 }
 
-.selected_genres{
- 
-background: rgb(28,64,194) !important;
-background: linear-gradient(96deg, rgba(28,64,194,0.9150253851540616) 43%, rgba(92,160,205,0.9794511554621849) 100%) !important;
-
+.btn-close:hover {
+  border: 1px solid violet;
+  background-color: gray;
 }
 
+.selected_genres {
+  background: rgb(28, 64, 194) !important;
+  background: linear-gradient(
+    96deg,
+    rgba(28, 64, 194, 0.9150253851540616) 43%,
+    rgba(92, 160, 205, 0.9794511554621849) 100%
+  ) !important;
+}
 
 /* Movie compenents css prpertys */
 
+.movies {
+  
 
-
-.movies{
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 30px; */
-
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 50px;
-    
-   
-    
+  display: grid;
+  grid-template-columns: repeat(5, 240px);
+  gap: 50px;
+  justify-content: space-around;
+  align-content: center;
 }
 
-
-
-.movieList{
-
-    box-shadow: 18px 4px 51px 20px rgba(0,0,0,0.1);
-    border-radius: 15px;
-    background-color: white;
-    position: relative;
-    
-
+.movieList {
+  box-shadow: 18px 4px 51px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: white;
+  position: relative;
+  height: 300px;
+  width: 200px;
 }
 
-.movie_name{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0px 10px;
-    font-size: 25px;
-
+.movie_name {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 15px;
+  font-size: 15px;
 }
 
-.movie_type_data{
-    display: flex;
-    justify-content: space-between;
+.movie_type_data {
+  display: flex;
+  justify-content: space-between;
 }
 
-.movie_title{
-    font-weight: bolder;
+.movie_title {
+  font-weight: bolder;
 }
 
-.movie_section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
-   
-         
+.movie_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+@media (max-width: 560px) {
 }
 
 @media (max-width: 767.98px) {
-  
-
   .movie_suggestion_content {
     padding-top: 70px;
   }
-  .movies {
-    grid-template-columns: repeat(1, 350px);
 
-    justify-content: center;
+  .movies {
+    grid-template-columns: repeat(1, 240px);
+
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -118,39 +111,40 @@ background: linear-gradient(96deg, rgba(28,64,194,0.9150253851540616) 43%, rgba(
   .pagination > span {
     padding: 15px 15px;
   }
+  .geners span {
+    font-size: 10px;
+    justify-content: center;
+  }
+  .geners {
+    gap: 10px;
+  }
 
-
-
+  .btn-close {
+    font-size: 10px !important;
+    width: 10px;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px){
-    
-
-    .movies {
-    grid-template-columns: repeat(2, 350px);
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .movies {
+    grid-template-columns: repeat(2, 240px);
 
     justify-content: center;
     align-items: center;
   }
-
-
 }
 
-
-@media (min-width:992px) and (max-width: 1399.98px){
-    
-
-    .movies {
-    grid-template-columns: repeat(3, 350px);
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .movies {
+    grid-template-columns: repeat(3, 240px);
 
     justify-content: center;
     align-items: center;
   }
-
 }
-@media (min-width: 1400px) and (max-width:1989.98px){
-    .movies {
-    grid-template-columns: repeat(4, 350px);
+@media (min-width: 1400px) and (max-width: 1989.98px) {
+  .movies {
+    grid-template-columns: repeat(4, 240px);
 
     justify-content: center;
     align-items: center;

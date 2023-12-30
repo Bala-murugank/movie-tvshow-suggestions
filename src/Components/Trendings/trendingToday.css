@@ -1,11 +1,12 @@
-.TrendingToday {
+.TrendingToday,
+.movies {
   /* display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly; */
 
   display: grid;
-  grid-template-columns: repeat(5, 350px);
+  grid-template-columns: repeat(5, 240px);
 
   gap: 50px;
   justify-content: space-around;
@@ -17,14 +18,18 @@
   border-radius: 15px;
   background-color: white;
   position: relative;
+  height: 300px;
+  width: 200px;
 }
 
 .TrendingTodayList-name {
+  height: 90px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0px 10px;
-  font-size: 25px;
+  padding: 0px 15px;
+  font-size: 15px;
 }
 
 .TrendingTodayList-type-data {
@@ -53,7 +58,7 @@
   color: white;
   display: flex;
   border: 1px solid gold;
-  font-size: 30px;
+  font-size: 20px;
   background-color: gray;
   justify-content: center;
 }
@@ -61,7 +66,7 @@
 .pagination > span {
   cursor: pointer;
   border: 1px solid gold;
-  padding: 25px 35px;
+  padding: 15px 25px;
 }
 
 .selected_page {
@@ -73,22 +78,19 @@
   background-color: rgb(97, 101, 100);
   padding: 5px 5px;
   border-radius: 50%;
-  top: -25px;
-  right: -15px;
+  top: -15px;
+  right: -12px;
 
-  width: 70px;
+  width: 40px;
 }
 
-
-
 @media (max-width: 767.98px) {
-  
-
   .movie_suggestion_content {
     padding-top: 70px;
   }
-  .TrendingToday {
-    grid-template-columns: repeat(1, 350px);
+  .TrendingToday,
+  .movies {
+    grid-template-columns: repeat(1, 240px);
 
     justify-content: center;
     align-items: center;
@@ -100,47 +102,36 @@
   }
 
   .pagination {
-    width: 250px;
+    width: 150px;
   }
   .pagination > span {
-    padding: 15px 15px;
+    padding: 0px 10px !important;
   }
-
-
-
 }
 
-@media (min-width: 768px) and (max-width: 991.98px){
-    
-
-    .TrendingToday {
-    grid-template-columns: repeat(2, 350px);
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .TrendingToday {
+    grid-template-columns: repeat(2, 240px);
 
     justify-content: center;
     align-items: center;
   }
-
-
 }
 
-
-@media (min-width:992px) and (max-width: 1399.98px){
-   
-
-    .TrendingToday {
-    grid-template-columns: repeat(3, 350px);
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .TrendingToday {
+    grid-template-columns: repeat(3, 240px);
 
     justify-content: center;
     align-items: center;
   }
-
 }
 
-@media (min-width: 1400px) and (max-width:1989.98px){
-    .TrendingToday {
-    grid-template-columns: repeat(4, 350px);
+@media (min-width: 1400px) and (max-width: 1989.98px) {
+  .TrendingToday {
+    grid-template-columns: repeat(4, 240px);
 
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 }

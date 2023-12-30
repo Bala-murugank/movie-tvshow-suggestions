@@ -49,7 +49,7 @@ const MovieShowDetailsModel = ({ children, id, media_type }) => {
         {children}
       </Button>
 
-      <Modal size="xl" show={lgShow} onHide={() => setLgShow(false)}>
+      <Modal size="lg" show={lgShow} onHide={() => setLgShow(false)}>
         <Modal.Header closeButton>
           <h2> {media_type === "tv" ? "TV Show Details" : "Movie Details"}</h2>
         </Modal.Header>

@@ -1,11 +1,12 @@
 .App{
-    min-height: 100vh;
-    min-width: 100vh;
-   padding-bottom: 130px;
+   width: 100vw;
+   height: 100vh;
+ 
 }
 
 .movie_suggestion_content{
     padding-top: 130px;
+     padding-bottom: 100px;
 }
 
 body{

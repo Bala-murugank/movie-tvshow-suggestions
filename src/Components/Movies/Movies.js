@@ -52,7 +52,6 @@ const Movies = () => {
           {movies.map((movieList) => (
             <MovieShowDetailsModel
               key={movieList.id}
-              style={{ height: 500, width: 320 }}
               className="movieList"
               id={movieList.id}
               media_type={"movie"}
@@ -78,14 +77,14 @@ const Movies = () => {
                     },
                     text: {
                       fontSize: "30px",
-                      fill: "black",
+                      fill: "white",
                     },
                   }}
                 />
               </span>
               <div>
                 <img
-                  style={{ height: 350, width: 320, objectFit: "fill" }}
+                  style={{ height: 250, width: 220, objectFit: "fill" }}
                   src={
                     movieList.backdrop_path
                       ? `${img_300}${movieList.backdrop_path}`
@@ -98,7 +97,7 @@ const Movies = () => {
               </div>
               {/* <Badge className="badge">9</Badge> */}
 
-              <div style={{ height: 140, width: 320 }} className="movie_name">
+              <div className="movie_name">
                 <div>
                   <span className="movie_title">
                     {movieList.title || movieList.name}
